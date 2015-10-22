@@ -75,6 +75,8 @@ public class Minicraft extends ApplicationAdapter {
             x += xV * Gdx.graphics.getDeltaTime();
             y += yV * Gdx.graphics.getDeltaTime();
 
+            //Setting of the outer limits of the window
+            //Cannot cross invisible walls
             if(x< 0 || x> (Gdx.graphics.getWidth()-WIDTH)){
                 x = oldX;
             }
@@ -108,7 +110,7 @@ public class Minicraft extends ApplicationAdapter {
                 img = left;
             }
         }//End of outer Else statement
-        Gdx.gl.glClearColor(0,0.5f,1,1);
+        Gdx.gl.glClearColor(0,0.5f,0,1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         batch.begin();
         // draw here
